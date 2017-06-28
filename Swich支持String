@@ -1,0 +1,2 @@
+Switch支持String的实现原理是什么？
+  Swtch在JDK1.7的版本支持String作为参数匹配，是通过String的hashCode转换为int类型的值进行判断
