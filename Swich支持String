@@ -1,2 +1,7 @@
 Switch支持String的实现原理是什么？
-  Swtch在JDK1.7的版本支持String作为参数匹配，是通过String的hashCode转换为int类型的值进行判断
+  Swtch在JDK1.7的版本支持String作为参数匹配，是通过String的hashCode转换为int类型的值进行匹配，再调用equals方法判断值是否相等。
+  底层的JVM没有对此进行新的指令操作，而是通过Javac生成的相应代码。
+  传入的String不能为NULL，否则调用hashCode方法就会报NullPointerException。
+  
+  学习自：http://www.cnblogs.com/IT-Monkey/p/4047085.html
+  
